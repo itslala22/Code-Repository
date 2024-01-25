@@ -25,13 +25,17 @@ Example Test Cases:
 
 
 def speeding_ticket(speed, is_birthday):
-    # Adjust the speed limit if it's the driver's birthday
-    speed_limit_adjustment = 5 if is_birthday else 0
-
-    # Determine the ticket type based on the adjusted speed limits
-    if speed <= 60 + speed_limit_adjustment:
+    speed = input ("Enter the speed: ")
+    is_birthday = input ("Is it your birthday?")
+    
+    if is_birthday is True:
+        speed_limit = 5
+    else:
+        speed_limit = 0
+  
+    if speed <= 60 + speed_limit:
         return "No Ticket"
-    elif 61 <= speed <= 80 + speed_limit_adjustment:
+    elif 61 <= speed <= 80 + speed_limit:
         return "Small Ticket"
     else:
         return "Big Ticket"
