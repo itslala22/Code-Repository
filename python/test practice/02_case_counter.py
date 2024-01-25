@@ -21,8 +21,6 @@ Example Test Cases:
 
 
 def case_counter(text):
-    
-    text = input ("Enter the string: ")
     upper_outcome = 0
     lower_outcome = 0
     
@@ -31,8 +29,12 @@ def case_counter(text):
             upper_outcome += 1
         elif utype.islower():
             lower_outcome += 1
+    
+    return f"Uppercase letters: {upper_outcome}, Lowercase letters: {lower_outcome}"
 
-return "Uppercase letters: {upper_outcome}, Lowercase letters: {lower_outcome}"
+text = input ("Enter the string: ")
+result = case_counter(text)
+print(result)
 
 
 # Test cases
