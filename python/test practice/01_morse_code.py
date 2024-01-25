@@ -59,15 +59,22 @@ def morse_translator(text):
     # The function should return the translated Morse code string
 
 
-    translated = []
-    for char in text.upper():
+text = input ("Enter a string to translate into Morse code: ")
+
+    morse_code_string = ""
+
+    for char in text:
+        char = char.upper()
+
+        # Check if the character is a letter and translate it
         if char.isalpha():
-            translated.append(morse_code_dict[char])
+            morse_code_string += morse_code_dict[char] + " "
+        # Check for space (word boundary)
         elif char == " ":
-            translated.append("/")
-    
-    # Join the Morse code with spaces and return
-    return ' '.join(translated)
+            morse_code_string += "/ "
+
+    # Return the final Morse code string
+    return morse_code_string.strip()
 
 
 # Test cases
