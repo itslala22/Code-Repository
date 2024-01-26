@@ -24,13 +24,12 @@ Example Test Cases:
 import string
 
 def word_filter_counter(text, filter_words):
-    for word in filter_words:
-        filter_words = [word.lower()]
+    filter_words = [word.lower() for word in filter_words]
 
     text = text.lower()
     for needtoremove in string.punctuation:
         text = text.replace(needtoremove, " ")
-    
+
     words = text.split()
     
     word_count = {}
