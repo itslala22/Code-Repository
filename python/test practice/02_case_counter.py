@@ -30,14 +30,9 @@ def case_counter(text):
         elif utype.islower():
             lower_outcome += 1
     
-    return f"Uppercase letters: {upper_outcome}, Lowercase letters: {lower_outcome}"
-
-text = input ("Enter the string: ")
-result = case_counter(text)
-print(result)
+    print("Uppercase letters: ", upper_outcome, ",", "Lowercase letters: ", lower_outcome)
 
 
-# Test cases
 case_counter("Hello World!")  # Expected: Uppercase letters: 2, Lowercase letters: 8
 case_counter("PYTHON")  # Expected: Uppercase letters: 6, Lowercase letters: 0
 case_counter("python")  # Expected: Uppercase letters: 0, Lowercase letters: 6
