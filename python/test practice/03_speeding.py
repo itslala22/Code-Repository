@@ -25,8 +25,6 @@ Example Test Cases:
 
 
 def speeding_ticket(speed, is_birthday):
-    speed = input ("Enter the speed: ")
-    is_birthday = input ("Is it your birthday?")
     
     if is_birthday is True:
         speed_limit = 5
@@ -34,14 +32,13 @@ def speeding_ticket(speed, is_birthday):
         speed_limit = 0
   
     if speed <= 60 + speed_limit:
-        return "No Ticket"
+        print("No Ticket")
     elif 61 <= speed <= 80 + speed_limit:
-        return "Small Ticket"
+        print("Small Ticket")
     else:
-        return "Big Ticket"
+        print("Big Ticket")
 
 
-# Test cases
 speeding_ticket(60, False)  # Expected output: "No Ticket"
 speeding_ticket(75, False)  # Expected output: "Small Ticket"
 speeding_ticket(85, False)  # Expected output: "Big Ticket"
