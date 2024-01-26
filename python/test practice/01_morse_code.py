@@ -54,12 +54,6 @@ def morse_translator(text):
         "Z": "--..",
     }
 
-    # Your code goes here
-    # Remember to consider both upper and lower case letters, and spaces
-    # The function should return the translated Morse code string
-
-
-    text = input ("Enter a string to translate into Morse code: ")
 
     morse_code_string = ""
 
@@ -76,11 +70,6 @@ def morse_translator(text):
     return morse_code_string.strip()
 
 
-# Test cases
-print(
-    morse_translator("HELLO WORLD")
-)  # Expected output: ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
+print(morse_translator("HELLO WORLD"))  # Expected output: ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
 print(morse_translator("Python"))  # Expected output: ".--. -.-- - .... --- -."
-print(
-    morse_translator("Morse Code")
-)  # Expected output: "-- --- .-. ... . / -.-. --- -.. ."
+print(morse_translator("Morse Code"))  # Expected output: "-- --- .-. ... . / -.-. --- -.. ."
