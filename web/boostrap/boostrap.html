@@ -8,17 +8,239 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style_extra.css">
 </head>
 
 
 <body>
-    <h1 class="text-center">Warwick XXX</h1>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Warwick XXX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <!--nav pages-->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Page 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Page 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Page 3</a>
+                    </li>
 
 
+                    <!--nav dropdown-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                    <!--idk??-->
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+
+                <!--search bar-->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
 
 
+    <!-- Image with heading -->
+
+    <img src="https://cdn.mos.cms.futurecdn.net/Xfkx5W8JpjCijuuAMSjpyB.jpg" class="img-fluid" alt="heading pic">
+
+    <div class="card text-bg-dark">
+        <img src="https://cdn.mos.cms.futurecdn.net/Xfkx5W8JpjCijuuAMSjpyB.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+            <h5 class="card-title">Warwick XXX</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+        </div>
+    </div>
 
 
+    <!-- Menu heading -->
+
+    <h1 class="display-4">Menu</h1>
+
+
+    <!-- Main cards -->
+
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>WMG Trading Cards</h2>
+                    </div>
+                    <img src="images/james-bronze.jpg" class="card-img-top" alt="James">
+                    <div class="card-body">
+                        <h4 class="card-text" style="color: #CD7F32;">James Pennington (Bronze)</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Fashion:</b> 10</li>
+                            <li class="list-group-item"><b>Strictness:</b> 10</li>
+                            <li class="list-group-item"><b>Wealth:</b> 10</li>
+                            <li class="list-group-item"><b>Humour:</b> 0</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>WMG Trading Cards</h2>
+                    </div>
+                    <img src="images/james-silver.jpg" class="card-img-top" alt="James">
+                    <div class="card-body">
+                        <h4 class="card-text" style="color: silver;">James Pennington (Silver)</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Fashion:</b> 10</li>
+                            <li class="list-group-item"><b>Strictness:</b> 10</li>
+                            <li class="list-group-item"><b>Wealth:</b> 10</li>
+                            <li class="list-group-item"><b>Humour:</b> 0</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>WMG Trading Cards</h2>
+                    </div>
+                    <img src="images/james-gold.jpg" class="card-img-top" alt="James">
+                    <div class="card-body">
+                        <h4 class="card-text" style="color: gold;">James Pennington (Gold)</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Fashion:</b> 10</li>
+                            <li class="list-group-item"><b>Strictness:</b> 10</li>
+                            <li class="list-group-item"><b>Wealth:</b> 10</li>
+                            <li class="list-group-item"><b>Humour:</b> 0</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
 
 
 </body>
