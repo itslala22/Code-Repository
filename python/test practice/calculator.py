@@ -52,6 +52,7 @@ def calculator():
             break
         else:
             print("Invalid input. Please try again.")
+            print("--------------------------------")
 
 
 calculator()
