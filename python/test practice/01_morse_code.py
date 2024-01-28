@@ -65,7 +65,7 @@ def morse_translator(text):
         elif utype == " ":
             morse_code_string += "/ "
         else:
-            morse_code_string += "Please enter a valid STRING again"
+            morse_code_string = "Please enter a valid STRING again"
 
     return morse_code_string.strip()
 
