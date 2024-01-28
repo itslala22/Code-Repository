@@ -24,7 +24,8 @@ Example Test Cases:
 import string
 
 def word_filter_counter(text, filter_words):
-    filter_words = [word.lower() for word in filter_words]
+    for word in filter_words:
+        filter_words = [word.lower()]
 
     text = text.lower()
     for needtoremove in string.punctuation:
