@@ -1,5 +1,5 @@
 body {
-    background-color: beige;
+    background-color: blueviolet;
     color: black;
 }
 
@@ -12,11 +12,12 @@ body {
 }
 
 .navbar-brand {
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
-.order-button {
-    background-color: aqua;
+.order-button,
+.search-button {
+    background-color: chocolate;
     color: black;
     border: none;
 }
