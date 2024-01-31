@@ -1,0 +1,158 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>未知 </title></head><body>
+<h1 id="readme">README</h1>
+<hr />
+<p>|Author|u5503577|</p>
+<hr />
+<h1 id="e-business-event-management-system">E-Business Event Management System</h1>
+<hr />
+<h2 id="explanation">Explanation</h2>
+<hr />
+<p>This E-Business Event Management System is a central component of the event management system and reproting or analysis system based on the events database and customers database, which are implemented as dictionaries in Python, where each key represents a unique event/customer ID and the associated value is another dictionary containing details about the related event/customer.</p>
+<h3 id="structure-of-the-event-database">Structure of the event database</h3>
+<hr />
+<p>The event database in the E-Business Event Management System is structured as a Python dictionary where each event is uniquely identified by an event ID. The structure of the database includes the following information for each event:</p>
+<p>Event ID: A unique identifier for each event.
+Name: The name of the event.
+Speaker: The name of the speaker for the event.
+Date: The date of the event, stored as a string in the format "YYYY-MM-DD".
+Capacity: The maximum number of attendees for the event.
+Attendees: A counter to track the number of attendees registered for the event.
+Feedback: A list to store feedback from attendees, typically as numeric ratings or text comments.
+Each of these elements is a key in the dictionary, with the respective event details as values. This structure allows for efficient management and retrieval of event-related information within the system.</p>
+<p>In addition to the event database, the E-Business Event Management System also includes a customer database. This database is designed to track customer interactions with the events and their accumulated loyalty points. Here's a brief overview of its structure:</p>
+<p>Customer ID: A unique identifier for each customer.
+Name: The name of the customer.
+Loyalty Points: A numerical value representing the loyalty points accumulated by the customer, typically earned through event registrations.
+Attended Events: A list of event IDs that the customer has registered for or attended.
+This customer database is structured as a Python dictionary, where each customer is uniquely identified by their customer ID. The structure facilitates tracking customer engagement with events and managing their loyalty rewards within the system.</p>
+<h3 id="key-desecion-making">Key Desecion Making</h3>
+<hr />
+<h4 id="error-handling">Error-handling</h4>
+<p>It is a crucial aspect to ensure the system runs smoothly and can handle unexpected user inputs or system states. Key considerations for error-handling in this system include:</p>
+<p>Input Validation: Checking if user inputs are in the correct format and within expected ranges (e.g., dates in "YYYY-MM-DD" format, capacity as a positive integer).
+Handling Non-existent Data: Ensuring the system gracefully handles requests for events or customers that do not exist in the database.
+Capacity Management: Preventing over-registration for an event by checking and enforcing the maximum capacity.
+Data Type Checking: Ensuring that inputs like names, dates, and feedback are of the correct data type to prevent type errors.
+Robust Feedback System: Handling a variety of feedback inputs, including edge cases where no feedback is provided.</p>
+<h2 id="testing">Testing</h2>
+<hr />
+<p>First of all, the expected user interface should be like:</p>
+<p>```
+Welcome to E-Business Event Management System!</p>
+<hr />
+<p>Event creation and Management
+1. Create Event
+2. Modify Event
+3. Register for Event
+4. Check Loyalty Points</p>
+<hr />
+<p>Report Mechanism
+5. Generate Report</p>
+<hr />
+<p>Feedback Mechanism
+6. Record Feedback</p>
+<hr />
+<ol>
+<li>Exit</li>
+</ol>
+<p>Enter your choice:
+```
+As for functions, each fuction has a definition code and the expection outcomes of each functions have both error-handling outcomes and valid outcomes.
+Here are all the functions listed:</p>
+<h3 id="and-becasue-of-the-limited-time-not-all-error-handling-results-are-listed-here-but-you-could-read-this-in-the-python-code-and-the-comments-sorry-for-the-inconvenience">And becasue of the limited time, not all error-handling results are listed here, but you could read this in the python code and the comments, sorry for the inconvenience!</h3>
+<h3 id="function-1">Function 1:</h3>
+<p>Each fuction has a definition code like this: </p>
+<p>```python
+def create_event():
+    event_id = input("Enter a unique event ID: ")
+    if event_id in events:
+        print("An event with this ID already exists. Please use a different ID.")
+        return</p>
+<pre><code>name = input("Enter the event name: ")
+speaker = input("Enter the speaker's name: ")
+date = input("Enter the event date (YYYY-MM-DD): ")
+capacity = int(input("Enter the capacity of the event: "))
+
+events[event_id] = {
+    'name': name,
+    'speaker': speaker,
+    'date': date,
+    'capacity': capacity,
+    'attendees': 0,
+    'feedback': []
+}
+print(f"Event '{name}' created successfully.")
+</code></pre>
+<p>```
+And the expection outcomes of each functions have both error-handling outcomes and valid outcomes. Like followings:</p>
+<p>Error-handling:
+<code>Enter your choice: 1
+Enter a unique event ID: Event_id_1
+An event with this ID already exists. Please use a different ID.</code>
+Others:
+```
+Enter your choice: 1
+Enter a unique event ID: 123
+Enter the event name: name
+Enter the speaker's name: wang
+Enter the event date (YYYY-MM-DD): 2023-12-12
+Enter the capacity of the event: 5
+Event 'name' created successfully.</p>
+<p>```</p>
+<h3 id="function-2">Function 2:</h3>
+<p>Expected:</p>
+<p><code>Enter your choice: 2
+Enter event ID: Event_id_1
+Select the information you want to modify:
+1. Name
+2. Speaker
+3. Date
+4. Capacity
+Enter your choice: 1
+Enter new name: new meeting
+Event 'new meeting' updated.</code></p>
+<h3 id="function-3">Function 3:</h3>
+<p>Expected:</p>
+<p>```
+Enter your choice: 3
+Enter customer ID: customer_id_1
+Enter event ID: Event_id_1
+Registration successful. Loyalty points updated for customer ID customer_id_1.</p>
+<p>Welcome to E-Business Event Management System!</p>
+<p>```</p>
+<h3 id="function-4">Function 4:</h3>
+<p>Expected:</p>
+<p>```
+Enter your choice: 4
+Enter customer ID: customer_id_1 
+Customer ID: customer_id_1, Total Loyalty Points: 5</p>
+<p>Welcome to E-Business Event Management System!</p>
+<p>```</p>
+<h3 id="function-5">Function 5:</h3>
+<p>Expected:</p>
+<p>```
+Enter your choice: 5
+Enter event ID: Event_id_1</p>
+<p>--- Detailed Report for Event: MKT Campagin ---
+Event ID: Event_id_1
+Speaker: Alice, Bob
+Date: 2023-12-12
+Capacity: 7, Attendees: Wang, Li
+No feedback received for this event.
+Exiting system.</p>
+<p>```</p>
+<h3 id="function-6">Function 6:</h3>
+<p>Expected:</p>
+<p><code>Enter your choice: 6
+Enter event ID: Event_id_1
+Enter the feedback:good
+Feedback recorded for event MKT Campagin.</code></p>
+<h3 id="function-7">Function 7:</h3>
+<p>Expected:</p>
+<p>```
+Enter your choice: 7
+Exiting system.</p>
+<p>```</p>
+<h2 id="the-end">The END</h2>
+<hr />
+</body></html>
