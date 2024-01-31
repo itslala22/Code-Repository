@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Warwick Cafe!</title>
-
+    <!-- Link to bootstrap css file here -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!--In addition to Boostrap things, link to another css file here-->
+    <!-- In addition to Boostrap things, link to another css file here -->
     <link rel="stylesheet" href="./style_extra.css">
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: aqua;">
+    <!-- Sticky-top + bg_color design-->
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: white;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <!--Logo pic without text-->
-                <img src="data:image/png;base64,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"
-                    alt="Bootstrap" width="60" height="44">
+                <!--Logo pic without text, adjust the size-->
+                <img src="./images/logo.png" alt="Bootstrap" width="60" height="44">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -187,52 +187,58 @@
     <div id="carouselExampleCaptions" class="carousel slide">
         <!--indicators-->
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
 
         <!--edit the inner content-->
         <div class="carousel-inner">
-          
-            <div class="carousel-item active">
-            <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
-        
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
 
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
             </div>
-          </div>
-        
-        <!--button-->
+
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+
+            <!--button-->
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
 
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
 
-      </div>
+    </div>
 
 
     <!-- Contact/Area Container -->
