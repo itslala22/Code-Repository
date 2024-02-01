@@ -56,3 +56,77 @@ else:
   print("Something else went wrong")
 finally:
    print("is finishied")
+
+
+def test(string, str):
+    last_position = -1
+    while True:
+        position = string.find(str, last_position+1)
+        if position == -1:
+            return last_position
+        last_position = position
+
+
+print(test('hi how are you hello world, hello yoyo!', 'hello'))
+
+
+while True:
+    try:
+        num = int(input('Input：'))
+    except ValueError: 
+        print("Invaild！")
+        continue
+    if num % 2 == 0:
+        print('Even number')
+    else:
+        print('Odd number')
+    break
+
+def trim(s):
+    flag = 0
+    if s[:1]==' ':
+        s = s[1:]
+        flag = 1
+    if s[-1:] == ' ':
+        s = s[:-1]
+        flag = 1
+    if flag==1:
+        return    trim(s)
+    else:
+        return s
+print(trim('  Hello world!  '))
+
+def trim(s):
+    while(True):
+        flag = 0
+        if s[:1]==' ':
+            s = s[1:]
+            flag = 1
+        if s[-1:] == ' ':
+            s = s[:-1]
+            flag = 1
+        if flag==0:
+            break
+    return s
+print(trim('  Hello world!  '))
+
+def test():
+    n = 8
+    for i in range(-int(n/2), int(n/2) + 1):
+        print(" "*abs(i), "*"*abs(n-abs(i)*2))
+
+
+print(test())
+
+
+def test(sum_to):
+    
+    sum_all = 0
+    for i in range(1, sum_to + 1):
+        sum_all += i * (-1) ** (1 + i)
+    return sum_all
+
+
+if __name__ == '__main__':
+    result = test(sum_to=100)
+    print(result)
