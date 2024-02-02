@@ -130,3 +130,78 @@ def test(sum_to):
 if __name__ == '__main__':
     result = test(sum_to=100)
     print(result)
+
+
+def test(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i*10+i
+    return sum
+
+print(test(5))
+
+
+a = 'hello'
+b = 'world'
+
+c = a
+a = b
+b = c
+print(a, b)
+
+def test():
+    x = [1, 'a', 0, '2', 0, 'a', 1]
+    if x == x[::-1]:
+        return True
+    return False
+
+print(test())
+
+
+def test():
+    a = [1, 3, 5, 7, 11]
+    print(a[::-1])
+    count = 0
+    for i in a:
+        count += 1
+        if count % 2 != 0:
+            print(i)
+
+test()
+
+
+a = [1, 6, 8, 11, 9, 1, 8, 6, 8, 7, 8]
+print(sorted(a))
+
+
+L1 = [1, 2, 3, 11, 2, 5, 3, 2, 5, 33, 88]
+print(max(L1))
+print(min(L1))
+
+
+class Test(object):
+
+    def __init__(self):
+        self.L1 = [1, 2, 3, 11, 2, 5, 3, 2, 5, 33, 88]
+
+        self.num = self.L1[0]
+
+    def test_small_num(self, count):
+
+        for i in self.L1:
+            if count == 1:
+                if i > self.num:
+                    self.num = i
+            
+            elif count == 2:
+                if i < self.num:
+                    self.num = i
+                    
+            elif count != 1 or count != 2:
+                return "pls input valid things: "
+
+        return self.num
+
+
+print(Test().test_small_num(1))
+print(Test().test_small_num(2))
