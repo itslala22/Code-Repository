@@ -205,3 +205,35 @@ class Test(object):
 
 print(Test().test_small_num(1))
 print(Test().test_small_num(2))
+
+
+def test():
+    a = ["hello", "world", "yoyo", "congratulations"]
+    
+    length = len(a[0])
+    
+    for i in a:
+        if len(i) > length:
+            length = i
+    return length
+
+
+print(test())
+
+
+def test():
+    L1 = [1, 2, 3, 11, 2, 5, 3, 2, 5, 33, 88]
+    return sorted(L1)[:3]
+
+print(test())
+
+
+
+def test():
+    a = [1, -6, 2, -5, 9, 4, 20, -3]
+    lists = []
+    for i in a:
+        lists.append(abs(i))
+    return lists
+
+print(test())
